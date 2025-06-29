@@ -1,11 +1,74 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import "../../public/styles.css";
 ---
 
 <Layout>
-	<Welcome />
+    <section class="intro">
+        <h1>Hoja de Cálculo en JavaScript</h1>
+        <p>
+            Esta hoja de cálculo es un proyecto que implementa funcionalidad
+            básica de cálculo directamente en el navegador usando JavaScript
+            puro. Puedes escribir valores numéricos o fórmulas en cada celda.
+        </p>
+        <h2>¿Cómo funciona?</h2>
+        <p>
+            Para insertar una fórmula, comienza con el símbolo <code>=</code> seguido
+            de una expresión. Por ejemplo:
+        </p>
+        <ul>
+            <li><code>=5+3</code> suma 5 y 3.</li>
+            <li><code>=sum(1,2,3)</code> calcula la suma de los números.</li>
+            <li>
+                <code>=A1+B2</code> suma el contenido de las celdas A1 y B2.
+            </li>
+            <li>
+                <code>=median(4,6,8)</code> calcula la mediana de los números.
+            </li>
+        </ul>
+        <h2>Funciones soportadas</h2>
+        <p>El sistema soporta varias funciones útiles, como:</p>
+        <ul>
+            <li><code>sum()</code>: suma todos los números que se pasan.</li>
+            <li><code>average()</code>: calcula el promedio.</li>
+            <li><code>median()</code>: calcula la mediana.</li>
+            <li><code>even()</code>: devuelve sólo los números pares.</li>
+            <li>
+                <code>someeven()</code>: verifica si hay al menos un número par.
+            </li>
+            <li>
+                <code>everyeven()</code>: verifica si todos los números son
+                pares.
+            </li>
+            <li>
+                <code>firsttwo()</code> y <code>lasttwo()</code>: devuelven los
+                primeros o últimos dos números.
+            </li>
+            <li><code>has2()</code>: verifica si el número 2 está presente.</li>
+            <li>
+                <code>increment()</code>: incrementa todos los números en uno.
+            </li>
+            <li>
+                <code>random()</code>: genera un número aleatorio dentro de un
+                rango.
+            </li>
+            <li>
+                <code>range()</code>: genera un rango de números entre dos
+                valores.
+            </li>
+            <li><code>nodupes()</code>: elimina números duplicados.</li>
+        </ul>
+        <h2>Referencias y rangos</h2>
+        <p>
+            Puedes usar referencias a otras celdas por su identificador (como <code
+                >A1</code
+            >, <code>B2</code>) para hacer cálculos basados en otras celdas.
+            También soporta rangos, por ejemplo: <code>=sum(A1:A5)</code> sumará
+            todos los valores entre A1 y A5.
+        </p>
+        <p>Haz clic abajo para abrir y probar la hoja de cálculo:</p>
+        <a class="btn" href="/spreadsheet" role="button"
+            >Abrir hoja de cálculo</a
+        >
+    </section>
 </Layout>
